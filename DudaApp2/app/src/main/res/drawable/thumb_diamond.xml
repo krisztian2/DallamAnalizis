@@ -1,0 +1,13 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="42dp"
+    android:height="42dp"
+    android:viewportWidth="42"
+    android:viewportHeight="42">
+
+    <!-- Rombusz alak -->
+    <path
+        android:fillColor="@android:color/holo_purple"
+        android:strokeColor="@android:color/white"
+        android:strokeWidth="2"
+        android:pathData="M21,1 L41,21 L21,41 L1,21 Z"/>
+</vector>

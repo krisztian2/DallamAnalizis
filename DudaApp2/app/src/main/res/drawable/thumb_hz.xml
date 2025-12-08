@@ -1,0 +1,24 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="60dp"
+    android:height="60dp"
+    android:viewportWidth="60"
+    android:viewportHeight="60">
+
+    <!-- Kör alakú háttér -->
+    <path
+        android:fillColor="@android:color/holo_purple"
+        android:pathData="M30,0
+                          A30,30 0 1,1 29.9,0 z"/>
+
+    <!-- "Hz" felirat vektorként -->
+    <group
+        android:translateX="15"
+        android:translateY="35">
+        <path
+            android:fillColor="@android:color/white"
+            android:pathData="M0,0 h10 v-2 h-4 v-6 h-2 v6 h-4 z"/> <!-- H -->
+        <path
+            android:fillColor="@android:color/white"
+            android:pathData="M12,0 h2 v-8 h-2 z"/> <!-- z (egyszerűsített) -->
+    </group>
+</vector>

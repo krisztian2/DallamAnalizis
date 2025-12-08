@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">DudaApp2</string>
+
+    <!-- Fő gombok -->
+    <string name="dallam">Dallam</string>
+    <string name="kontra">Kontra</string>
+    <string name="bordo">Bordó</string>
+    <string name="dudalas">DUDÁLÁS</string>
+
+    <!-- Alsó gombok -->
+    <string name="play">LEJÁTSZÁS</string>
+    <string name="record">FELVÉTEL</string>
+    <string name="stop">STOP</string>
+
+    <!-- Egyéb feliratok -->
+    <string name="freq_label">%1$.1f Hz</string>
+
+    <!-- Kisegítő lehetőségek (Content Description) -->
+    <string name="increase_freq">Frekvencia növelése</string>
+    <string name="decrease_freq">Frekvencia csökkentése</string>
+    <string name="increase_vol">Hangerő növelése</string>
+    <string name="decrease_vol">Hangerő csökkentése</string>
+
+    <!-- Ez hiányozhatott -->
+    <string name="midi_on">MIDI ON</string>
+    <string name="midi_off">MIDI OFF</string>
+</resources>

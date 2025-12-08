@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- 1. SÍP VÁLASZTÓ GOMBOK (FELSŐ SOR) -->
+    <Button
+        android:id="@+id/button_sip_dallam"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/dallam"
+        android:backgroundTint="#FF4CAF50"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_sip_kontra"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_sip_kontra"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/kontra"
+        android:backgroundTint="#FF2196F3"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintStart_toEndOf="@id/button_sip_dallam"
+        app:layout_constraintEnd_toStartOf="@+id/button_sip_bordo"
+        app:layout_constraintTop_toTopOf="@id/button_sip_dallam" />
+
+    <Button
+        android:id="@+id/button_sip_bordo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/bordo"
+        android:backgroundTint="#FFFF9800"
+        app:layout_constraintStart_toEndOf="@id/button_sip_kontra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/button_sip_dallam" />
+
+    <!-- 2. DUDÁLÁS GOMB (A SÍPOK ALATT) -->
+    <Button
+        android:id="@+id/button_dudalas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dudalas"
+        android:backgroundTint="#FF673AB7"
+        android:layout_marginTop="8dp"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/button_sip_kontra"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 3. KÉP KÖZÉPEN (MEGNÖVELVE) -->
+    <ImageView
+        android:id="@+id/duda_head_image"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:src="@drawable/dudafej"
+        app:layout_constraintTop_toBottomOf="@+id/button_dudalas"
+        app:layout_constraintBottom_toTopOf="@+id/tvCurrentNote"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.4" />
+
+    <!-- BAL OLDAL: FREKVENCIA -->
+    <LinearLayout
+        android:id="@+id/layout_freq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/duda_head_image"
+        app:layout_constraintTop_toTopOf="@+id/duda_head_image"
+        app:layout_constraintBottom_toBottomOf="@+id/duda_head_image"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnIncreaseFreq"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@android:drawable/arrow_up_float"
+            android:backgroundTint="#FF4CAF50"
+            android:contentDescription="@string/increase_freq" />
+
+        <TextView
+            android:id="@+id/tvFrequency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="440.0 Hz"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"/>
+
+        <ImageButton
+            android:id="@+id/btnDecreaseFreq"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@android:drawable/arrow_down_float"
+            android:backgroundTint="#FF4CAF50"
+            android:contentDescription="@string/decrease_freq" />
+    </LinearLayout>
+
+    <!-- JOBB OLDAL: HANGERŐ -->
+    <LinearLayout
+        android:id="@+id/layout_vol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@+id/duda_head_image"
+        app:layout_constraintTop_toTopOf="@+id/duda_head_image"
+        app:layout_constraintBottom_toBottomOf="@+id/duda_head_image"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnIncreaseVol"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@android:drawable/arrow_up_float"
+            android:backgroundTint="#FF2196F3"
+            android:contentDescription="@string/increase_vol" />
+
+        <TextView
+            android:id="@+id/tvVolume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vol: 5"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"/>
+
+        <ImageButton
+            android:id="@+id/btnDecreaseVol"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@android:drawable/arrow_down_float"
+            android:backgroundTint="#FF2196F3"
+            android:contentDescription="@string/decrease_vol" />
+    </LinearLayout>
+
+    <!-- 4. HANGJEGY KIJELZŐ (A KÉP ALATT) -->
+    <TextView
+        android:id="@+id/tvCurrentNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:textColor="#00FF00"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/duda_head_image"
+        app:layout_constraintBottom_toTopOf="@+id/tvBattery"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- 5. AKKUMULÁTOR KIJELZŐ (A HANGJEGY ALATT) -->
+    <TextView
+        android:id="@+id/tvBattery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Akku: -- V"
+        android:textColor="#AAAAAA"
+        android:textSize="14sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/tvCurrentNote"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_buttons_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- 6. ALSÓ GOMBOK: LEJÁTSZÁS & FELVÉTEL -->
+    <LinearLayout
+        android:id="@+id/bottom_buttons_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/button_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/play"
+            android:backgroundTint="#FF00BCD4"
+            android:layout_marginEnd="32dp" />
+
+        <Button
+            android:id="@+id/button_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/record"
+            android:backgroundTint="#FFFF0000" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
