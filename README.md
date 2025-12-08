@@ -8,7 +8,8 @@ Nice to have: fizikai doboz, 3D nyomtatás megoldott
 
 ## Célja, rövid leírása
 
-...
+A Dallamanalízis egy olyan érintés- és hangalapú interaktív IoT rendszer, amelynek célja a felhasználó által létrehozott dallamok valós idejű érzékelése, feldolgozása és továbbítása egy mobilalkalmazás felé.
+A rendszer érintés- és mozgásalapú bemeneteket, valamint digitális hangkimenetet egyesít egy hordozható, akkumulátoros eszközben.
 
 ## Csapattagok és szerepük a projektben
 
