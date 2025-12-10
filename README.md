@@ -13,7 +13,7 @@ A rendszer érintés- és mozgásalapú bemeneteket, valamint digitális hangkim
 
 ## Csapattagok és szerepük a projektben
 
-**Ádám Krisztián Sándor** - MQTT kliens implementációja<br />
+**Ádám Krisztián Sándor** - Projekt asszisztálás + MQTT kliens implementációja<br />
 **Battai István** - eszközök kiválasztása, eszközök megrendelése, eszközépítése, eszköz üzembe helyezése, Bluetooth + app implementáció<br />
 **Fekete Dávid** - Projekt asszisztálás + Dokumentáció készítése<br />
 
